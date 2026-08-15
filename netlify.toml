@@ -1,0 +1,8 @@
+# Kairad Consulting — static site, no build step
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/assets/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

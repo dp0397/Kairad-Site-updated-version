@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrial Engineering Consulting — Computer Vision Work Measurement | Kairad Consulting</title>
+<meta name="description" content="A turnkey computer-vision solution, built on OpenCV, that tracks human and machine cycle time and flags standard-work deviations in real time. See it live on a pen manufacturing line.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link" aria-label="Kairad Consulting — home">
+      <span class="logo-mark">
+        <span class="logo-word">KAIRAD</span>
+        <span class="logo-chevrons" aria-hidden="true"><span></span><span></span><span></span></span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="industrial-engineering.html" aria-current="page">Industrial Engineering</a></li>
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Warehouse Consulting <span class="chevron" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="peb.html"><span class="dd-num">01</span><span class="dd-label">Pre-Engineered Buildings</span></a></li>
+            <li><a href="automation.html"><span class="dd-num">02</span><span class="dd-label">Digital Twin &amp; Automation</span></a></li>
+            <li><a href="audit.html"><span class="dd-num">03</span><span class="dd-label">Structural &amp; Rack Audits</span></a></li>
+            <li><a href="tracking.html"><span class="dd-num">04</span><span class="dd-label">PV-Plate BLE Tracking</span></a></li>
+            <li><a href="wms.html"><span class="dd-num">05</span><span class="dd-label">Warehouse Management System</span></a></li>
+          </ul>
+        </li>
+        <li><a href="dashboard.html">Live Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="header-cta-mobile"><a class="btn btn-primary btn-block" href="contact.html">Request a Quote</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-banner">
+    <div class="banner-bg" aria-hidden="true"><span>INDUSTRIAL ENGINEERING</span><span>INDUSTRIAL ENGINEERING</span></div>
+    <div class="container banner-content">
+      <div class="breadcrumb" aria-label="Breadcrumb">
+        <span class="breadcrumb-pill"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Industrial Engineering Consulting</span></span>
+      </div>
+      <p class="eyebrow"><span class="chevrons">&rsaquo;&rsaquo;&rsaquo;</span> SVC-IE &middot; Turnkey Solution</p>
+      <h1>See every cycle. Fix every bottleneck.</h1>
+      <p class="banner-sub">A turnkey solution that conducts automated cycle-time studies using computer vision — tracking human and machine movement to calculate cycle time automatically, catch deviations in real time, and eliminate the manual, error-prone time study.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow"><span class="chevrons">&rsaquo;&rsaquo;&rsaquo;</span> The Challenge</p>
+        <h2>Manual time study was never built to be accurate</h2>
+      </div>
+      <div class="callout">
+        <p>Work measurement today requires an Industrial Engineer to stand lineside, making and noting observations by hand. It's not just cumbersome — it's unreliable. The <strong>Hawthorne effect</strong> means worker speeds change simply because they're being watched, often producing intentionally slower work that sets artificially low benchmarks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Use cases / in the field ===== -->
+  <section class="bg-ink">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow"><span class="chevrons">&rsaquo;&rsaquo;&rsaquo;</span> In The Field</p>
+        <h2>Use cases: the tool at work</h2>
+        <p class="section-lede">Real deployments of Kairad's computer-vision work measurement — captured on live production floors.</p>
+      </div>
+
+      <div class="case-study">
+        <div class="case-study-head">
+          <span class="case-tag">Pen Manufacturing</span>
+          <span class="case-tag blue">Gel-Pen Cap Assembly</span>
+          <span class="case-tag blue">Manual Line</span>
+        </div>
+        <div class="case-study-body">
+          <div>
+            <h3>Vision-tracked assembly on a working pen line</h3>
+            <p>On a manual gel-pen assembly line, the system tracks each operator's hands through a five-step standard work sequence — pick rubber, place on press tool, pick cap, press with thumb, move finished part — using zone detection (RUBBER, PRESS, CAP, FINISHED) and fingertip-level motion recognition, with no wearables on the operator.</p>
+            <p>Every cycle is timed against an 11.0&nbsp;s benchmark built from per-step standard times. The live Andon monitor shows pace, cycles behind benchmark, and out-of-sequence work as it happens — and every deviation is logged with its exact cycle-time variance for line balancing afterwards.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>5</strong><span>standard work steps</span></div>
+              <div class="case-metric"><strong>11.0s</strong><span>benchmark cycle</span></div>
+              <div class="case-metric"><strong>Live</strong><span>deviation alerts</span></div>
+            </div>
+            <p class="media-caption">Left: pinch-detection and ROI zones overlaid on the operator's workstation. Right: the Line Andon cycle monitor during the same run.</p>
+          </div>
+          <div class="case-study-media">
+            <img src="assets/media/pen-cv-overlay.jpg" alt="Computer-vision overlay tracking an operator's hands across RUBBER, PRESS, CAP and FINISHED zones on a pen assembly workstation" width="1068" height="1122" loading="lazy">
+            <div class="case-video">
+              <video controls muted playsinline preload="metadata" poster="assets/media/pen-cycle-monitor-poster.jpg" aria-label="Screen recording of the Kairad Line Andon cycle monitor tracking gel-pen cap assembly">
+                <source src="assets/media/pen-cycle-monitor.mp4" type="video/mp4">
+                Your browser doesn't support embedded video — <a href="assets/media/pen-cycle-monitor.mp4">download the recording</a>.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITERATION SLOT: copy the .case-study block above for each new deployment.
+           Swap the tags, narrative, metrics, and the media files in assets/media/. -->
+      <div class="card iteration-slot" style="margin-top:1.5rem;">More deployments coming soon — medical, hospitality, and supply chain use cases are in progress.</div>
+    </div>
+  </section>
+
+  <section class="bg-paper">
+    <div class="container">
+      <div class="split">
+        <div>
+          <p class="eyebrow"><span class="chevrons">&rsaquo;&rsaquo;&rsaquo;</span> Real-Time Quality Assurance</p>
+          <h2>Catch deviations before the cycle completes</h2>
+          <ul class="checklist" style="grid-template-columns: 1fr; margin-top: 1.75rem;">
+            <li><strong>Catch Deviations Instantly</strong> — the system continuously monitors operator movements against the pre-determined standard work sequence.</li>
+            <li><strong>Automated Andon Loop</strong> — a sequence fault or pace drop triggers an instant backend alert on the line.</li>
+            <li><strong>Operator Acknowledgment</strong> — operators acknowledge the trigger and correct motion or sequence before the cycle completes.</li>
+            <li><strong>Reduce Rework</strong> — deviations are eliminated at the source, actualizing a "do it right the first time" ideology.</li>
+          </ul>
+        </div>
+        <div class="split-media">
+          <img src="assets/img/ie-assembly-line.svg" alt="Smart, IoT- and AI-enabled assembly line with computer-vision cycle-time tracking on a worker and a robotic arm" width="900" height="560" loading="lazy">
+          <div class="badge-float">
+            <strong>Non-Intrusive</strong>
+            <span>No wearables, no sensors on the operator — tracking happens entirely through vision</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow"><span class="chevrons">&rsaquo;&rsaquo;&rsaquo;</span> Impact</p>
+        <h2>Driving process and worker efficiency</h2>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <h3>Process Work Measurement</h3>
+          <p>Automates cycle-time collection down to the sub-task level, eliminating manual, isolated time studies in favor of continuous, accurate data.</p>
+        </div>
+        <div class="card">
+          <h3>Worker Efficiency &amp; Balancing</h3>
+          <p>Tracks pace against standard, exposing line-balancing issues and invisible bottlenecks such as inconsistent material feed rates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow"><span class="chevrons">&rsaquo;&rsaquo;&rsaquo;</span> The Technology</p>
+        <h2>Computer vision, built on OpenCV</h2>
+        <p class="section-lede">Our solution uses state-of-the-art computer vision to track human kinematics and component interactions directly on the floor — without requiring operators to wear any tracking device or sensor. The system parses visual data to measure cycle times, detect out-of-sequence operations, and feed live analytics to supervisors.</p>
+      </div>
+      <div class="card-grid cols-3">
+        <div class="card">
+          <h3>Non-Intrusive Monitoring</h3>
+          <p>Reduces the Hawthorne effect since operators aren't wearing or facing dedicated tracking hardware.</p>
+        </div>
+        <div class="card">
+          <h3>High-Precision Zone Tracking</h3>
+          <p>Region of Interest (ROI) tracking pinpoints exactly where in the workstation an action occurs.</p>
+        </div>
+        <div class="card">
+          <h3>Live Dashboard Analytics</h3>
+          <p>Supervisors see cycle-time and deviation data as it happens, not after the shift ends.</p>
+        </div>
+      </div>
+      <ul class="checklist" style="margin-top: 2rem;">
+        <li>Tracks upper and lower body movement, including micro-motions</li>
+        <li>Recognizes specific functions — gripping a tool, pinching a tube, picking a part</li>
+        <li>Detects hand rotation (wrist&ndash;middle-finger-base angle) to count exact clockwise/anticlockwise screw rotations</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-paper">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow"><span class="chevrons">&rsaquo;&rsaquo;&rsaquo;</span> Target Environments</p>
+        <h2>Built for repetitive, standardized production</h2>
+        <p class="section-lede">Adaptable to manual, semi-automated, or fully automated environments producing a repetitive, standardized product.</p>
+      </div>
+      <div class="card-grid cols-4">
+        <div class="card"><h3>Vehicle Manufacturing</h3></div>
+        <div class="card"><h3>Textile Manufacturing</h3></div>
+        <div class="card"><h3>FMCG Production &amp; Packaging</h3></div>
+        <div class="card"><h3>Silicon Chip Manufacturing &amp; Defense Applications</h3></div>
+        <!-- ITERATION SLOT: add more target industries here -->
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow"><span class="chevrons">&rsaquo;&rsaquo;&rsaquo;</span> Real-Time Analytics</p>
+        <h2>Future value, built into every cycle</h2>
+      </div>
+      <ul class="checklist" style="grid-template-columns: 1fr;">
+        <li>Automatically generates a CSV noting every deviation from standard work and the exact cycle-time variance</li>
+        <li>Reduces rework, automates cycle-time analysis for line balancing, and ensures real-time quality assurance</li>
+        <li>Easy Excel extraction for visualization and workflow automation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Run a pilot at your facility</h2>
+      <p>See computer-vision work measurement on your own line before committing to a full rollout.</p>
+      <div class="cta-band-actions">
+        <a href="contact.html" class="btn btn-primary">Book a Pilot</a>
+        <a href="peb.html" class="btn btn-outline">See Warehouse Consulting</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-mark">
+          <span class="logo-word">KAIRAD</span>
+          <span class="logo-chevrons" aria-hidden="true"><span></span><span></span><span></span></span>
+        </span>
+        <p>Relentless Optimization. An industrial engineering and warehouse consulting firm serving supply chain and manufacturing operators.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="industrial-engineering.html">Industrial Engineering Consulting</a></li>
+          <li><a href="peb.html">Pre-Engineered Buildings</a></li>
+          <li><a href="automation.html">Digital Twin &amp; Automation</a></li>
+          <li><a href="audit.html">Structural &amp; Rack Audits</a></li>
+          <li><a href="tracking.html">PV-Plate BLE Tracking</a></li>
+          <li><a href="wms.html">Warehouse Management System</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="dashboard.html">Live Dashboard</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h4 style="margin-top:1.5rem;">Contact</h4>
+        <address>
+          <a href="mailto:dharmesh.patel@kairad.org">dharmesh.patel@kairad.org</a>
+          <a href="tel:+919819712397">+91 98197 12397</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p style="font-size:0.9rem;">Occasional notes on warehouse automation and industrial engineering — no spam.</p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); this.reset(); this.querySelector('input').placeholder='Thanks — you\'re on the list';">
+          <label class="skip-link" for="newsletter-email-8">Email address</label>
+          <input type="email" id="newsletter-email-8" placeholder="you@company.com" required>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Kairad Consulting. All rights reserved.</span>
+      <span>Built on Kaizen + Radical Change.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
