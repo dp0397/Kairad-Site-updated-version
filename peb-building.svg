@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Pre-engineered steel warehouse frame">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101720"/><stop offset="1" stop-color="#0e0e0d"/></linearGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#8ab5e0" stroke-opacity="0.07"/></pattern>
+</defs>
+<rect width="900" height="560" rx="14" fill="url(#bg)"/><rect width="900" height="560" rx="14" fill="url(#grid)"/>
+<g stroke="#6a9bcc" stroke-width="3" fill="none" stroke-linecap="round">
+<path d="M120 470 L120 260 L450 130 L780 260 L780 470"/>
+<path d="M250 470 L250 208"/><path d="M450 470 L450 130"/><path d="M650 470 L650 208"/>
+<path d="M120 320 H780" stroke-opacity="0.45"/><path d="M120 395 H780" stroke-opacity="0.45"/>
+</g>
+<path d="M120 260 L450 130 L780 260" fill="none" stroke="#EE8329" stroke-width="5" stroke-linecap="round"/>
+<g stroke="#8ab5e0" stroke-opacity="0.5" stroke-width="2"><path d="M180 236 L285 400 M285 236 L180 400" /><path d="M615 236 L720 400 M720 236 L615 400"/></g>
+<rect x="380" y="360" width="140" height="110" rx="4" fill="none" stroke="#D97757" stroke-width="3"/>
+<path d="M450 360 V470" stroke="#D97757" stroke-width="3"/>
+<path d="M60 470 H840" stroke="#8ab5e0" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round"/>
+<g fill="#EE8329"><circle cx="205" cy="152" r="4"/><circle cx="695" cy="152" r="4"/></g>
+<text x="450" y="520" font-family="monospace" font-size="20" fill="#8595a5" text-anchor="middle">CLEAR SPAN · UP TO 93 M</text>
+</svg>

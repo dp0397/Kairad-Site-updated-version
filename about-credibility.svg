@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="25+ years of combined automation and industrial engineering experience">
+<defs><linearGradient id="abg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101720"/><stop offset="1" stop-color="#0e0e0d"/></linearGradient></defs>
+<rect width="640" height="640" rx="20" fill="url(#abg)"/>
+<circle cx="320" cy="300" r="170" fill="none" stroke="#6a9bcc" stroke-width="4"/>
+<circle cx="320" cy="300" r="196" fill="none" stroke="#8ab5e0" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 10"/>
+<g transform="translate(258,268)"><path d="M0 0 l22 32 l-22 32" stroke="#6a9bcc" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 0 l22 32 l-22 32" stroke="#EE8329" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M76 0 l22 32 l-22 32" stroke="#D97757" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="320" y="235" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="64" fill="#e7ebef" text-anchor="middle">25+</text>
+<text x="320" y="415" font-family="monospace" font-size="20" fill="#8ab5e0" text-anchor="middle">YEARS COMBINED</text>
+<text x="320" y="530" font-family="monospace" font-size="18" fill="#8595a5" text-anchor="middle">AUTOMATION · INDUSTRIAL ENGINEERING</text>
+<text x="320" y="560" font-family="monospace" font-size="18" fill="#8595a5" text-anchor="middle">SUPPLY CHAIN EXPERIENCE</text>
+</svg>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pune Logistics Dashboard — Preview</title>
+<style>
+  :root {
+    /* Forced dark to match the Kairad site (which has no light mode), tuned to the brand palette */
+    color-scheme: dark;
+    --page: #0e0e0d; --surface: #181817; --surface-2: #1f1f1d; --ink: #e7ebef; --ink-2: #b7c2cd;
+    --ink-muted: #8595a5; --line: rgba(138,181,224,0.14); --line-strong: rgba(138,181,224,0.28);
+    --accent: #6a9bcc; --accent-2: #EE8329; --green: #46c48a;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4); --shadow-lg: 0 8px 24px rgba(0,0,0,0.45);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: transparent;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .teaser {
+    width: 100%;
+    max-width: 860px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+
+  .t-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 22px 14px;
+    border-bottom: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .t-head .brand-eyebrow {
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);
+  }
+  .t-head h1 { margin: 3px 0 0; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 10px; border-radius: 999px; background: color-mix(in srgb, var(--green) 14%, transparent);
+    color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 0.02em; white-space: nowrap;
+  }
+  .live-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--green); animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  .t-body { display: grid; grid-template-columns: 1.3fr 1fr; gap: 0; }
+  @media (max-width: 620px) { .t-body { grid-template-columns: 1fr; } }
+
+  .panel { padding: 18px 22px; }
+  .panel + .panel { border-left: 1px solid var(--line); }
+  @media (max-width: 620px) { .panel + .panel { border-left: none; border-top: 1px solid var(--line); } }
+
+  .panel-label {
+    font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-muted);
+    margin-bottom: 10px;
+  }
+
+  /* Market glimpse */
+  .kpi-mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .kpi-mini {
+    background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+  }
+  .kpi-mini .k-label { font-size: 10px; color: var(--ink-muted); font-weight: 600; }
+  .kpi-mini .k-val {
+    margin-top: 3px; font-family: ui-monospace, "SF Mono", monospace; font-size: 18px; font-weight: 700;
+  }
+  .kpi-mini .k-unit { font-size: 10.5px; color: var(--ink-muted); font-weight: 500; margin-left: 2px; }
+
+  .mini-chart { margin-top: 14px; }
+  .mini-chart .mc-title { font-size: 11.5px; font-weight: 700; margin-bottom: 8px; }
+  .mc-row { display: grid; grid-template-columns: 96px 1fr 30px; align-items: center; gap: 8px; margin-top: 6px; }
+  .mc-row .mc-name { font-size: 10.5px; color: var(--ink-2); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mc-track { background: var(--line); border-radius: 3px; height: 9px; overflow: hidden; }
+  .mc-fill { height: 100%; border-radius: 3px; }
+  .mc-pct { font-family: ui-monospace, monospace; font-size: 10.5px; color: var(--ink-2); }
+
+  /* Tracking glimpse */
+  .route-strip { display: flex; align-items: center; gap: 6px; margin-top: 2px; }
+  .route-dot { width: 10px; height: 10px; border-radius: 999px; flex-shrink: 0; border: 2px solid var(--surface); box-shadow: var(--shadow); }
+  .route-line { flex: 1; height: 2px; background: repeating-linear-gradient(90deg, var(--line-strong) 0 5px, transparent 5px 9px); }
+  .route-caption { display: flex; justify-content: space-between; margin-top: 5px; font-size: 9.5px; color: var(--ink-muted); }
+
+  .status-row { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; }
+  .status-pill {
+    display: inline-flex; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 700;
+    background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent);
+  }
+  .eta-val { font-family: ui-monospace, monospace; font-size: 11.5px; font-weight: 700; }
+  .eta-label { font-size: 9.5px; color: var(--ink-muted); display: block; }
+
+  .mini-timeline { margin-top: 16px; list-style: none; padding: 0; }
+  .mini-timeline li { position: relative; padding-left: 18px; padding-bottom: 12px; font-size: 11.5px; color: var(--ink-2); }
+  .mini-timeline li:last-child { padding-bottom: 0; }
+  .mini-timeline li::before {
+    content: ""; position: absolute; left: 0; top: 3px; width: 8px; height: 8px; border-radius: 999px;
+  }
+  .mini-timeline li::after {
+    content: ""; position: absolute; left: 3px; top: 12px; bottom: -2px; width: 1px; background: var(--line);
+  }
+  .mini-timeline li:last-child::after { display: none; }
+  .mini-timeline li.m-gstn::before { background: var(--accent); }
+  .mini-timeline li.m-road::before { background: var(--accent-2); }
+  .mini-timeline li.m-rail::before { background: #4a3aa7; }
+  .mini-timeline .m-time { font-family: ui-monospace, monospace; font-size: 10px; color: var(--ink-muted); margin-left: 6px; }
+
+  .t-foot {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    padding: 14px 22px; border-top: 1px solid var(--line); background: var(--surface-2);
+  }
+  .t-foot p { margin: 0; font-size: 11px; color: var(--ink-muted); }
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700; padding: 9px 16px; border-radius: 10px;
+    box-shadow: var(--shadow); transition: filter 0.15s ease;
+  }
+  .cta-btn:hover { filter: brightness(1.08); }
+</style>
+</head>
+<body>
+
+  <div class="teaser">
+    <div class="t-head">
+      <div>
+        <div class="brand-eyebrow">Market Research · Pune Logistics Corridor</div>
+        <h1>Logistics Market Research &amp; Tracking Dashboard</h1>
+      </div>
+      <span class="live-badge"><span class="live-dot"></span>Live preview</span>
+    </div>
+
+    <div class="t-body">
+      <!-- Market Overview glimpse -->
+      <div class="panel">
+        <div class="panel-label">Market Overview · Chakan</div>
+        <div class="kpi-mini-grid">
+          <div class="kpi-mini">
+            <div class="k-label">Warehouse Space</div>
+            <div class="k-val">15.0<span class="k-unit">M sq ft</span></div>
+          </div>
+          <div class="kpi-mini">
+            <div class="k-label">Utilized</div>
+            <div class="k-val" style="color:var(--accent)">92<span class="k-unit">%</span></div>
+          </div>
+          <div class="kpi-mini">
+            <div class="k-label">Unfulfilled Demand</div>
+            <div class="k-val" style="color:var(--accent-2)">2.5M<span class="k-unit">sq ft</span></div>
+          </div>
+          <div class="kpi-mini">
+            <div class="k-label">Daily Freight</div>
+            <div class="k-val">45.0<span class="k-unit">k t/day</span></div>
+          </div>
+        </div>
+
+        <div class="mini-chart">
+          <div class="mc-title">Top industries by demand share</div>
+          <div class="mc-row"><div class="mc-name">Automotive OEMs</div><div class="mc-track"><div class="mc-fill" style="width:45%;background:#2a78d6"></div></div><div class="mc-pct">45%</div></div>
+          <div class="mc-row"><div class="mc-name">Auto-Ancillary</div><div class="mc-track"><div class="mc-fill" style="width:30%;background:#eb6834"></div></div><div class="mc-pct">30%</div></div>
+          <div class="mc-row"><div class="mc-name">Engineering</div><div class="mc-track"><div class="mc-fill" style="width:15%;background:#1baf7a"></div></div><div class="mc-pct">15%</div></div>
+        </div>
+      </div>
+
+      <!-- Live Tracking glimpse -->
+      <div class="panel">
+        <div class="panel-label">Multimodal Live Tracking · EWB123456789</div>
+
+        <div class="route-strip">
+          <span class="route-dot" style="background:#1baf7a"></span>
+          <span class="route-line"></span>
+          <span class="route-dot" style="background:var(--accent);width:12px;height:12px;"></span>
+          <span class="route-line"></span>
+          <span class="route-dot" style="background:#eb6834"></span>
+        </div>
+        <div class="route-caption">
+          <span>Chakan MIDC</span>
+          <span>JNPT Port</span>
+        </div>
+
+        <div class="status-row">
+          <span class="status-pill">In Transit · Rail</span>
+          <div style="text-align:right">
+            <span class="eta-label">ETA</span>
+            <span class="eta-val">Aug 5, 18:00 IST</span>
+          </div>
+        </div>
+
+        <ol class="mini-timeline">
+          <li class="m-gstn">E-Way Bill generated (GSTN)<span class="m-time">08:00</span></li>
+          <li class="m-road">Crossed toll plaza (FASTag)<span class="m-time">10:30</span></li>
+          <li class="m-rail">Loaded onto rake (FOIS)<span class="m-time">14:15</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="t-foot">
+      <p>Mock data for illustration · Full dashboard includes region drill-down &amp; live shipment search</p>
+      <a class="cta-btn" href="../contact.html" target="_top">Request full dashboard access →</a>
+    </div>
+  </div>
+
+</body>
+</html>

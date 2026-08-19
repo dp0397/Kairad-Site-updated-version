@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Computer-vision cycle-time tracking icon">
+<defs>
+  <linearGradient id="cbgie" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16202c"/><stop offset="1" stop-color="#0e0e0d"/></linearGradient>
+  <radialGradient id="glowie" cx="0.3" cy="0.25" r="0.7"><stop offset="0" stop-color="#6a9bcc" stop-opacity="0.22"/><stop offset="1" stop-color="#6a9bcc" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="480" height="320" rx="10" fill="url(#cbgie)"/>
+<rect width="480" height="320" rx="10" fill="url(#glowie)"/>
+<g stroke="#8ab5e0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="210" cy="118" r="19"/>
+  <path d="M210 137 V210 M210 155 L172 200 M210 155 L252 195 M210 210 L182 262 M210 210 L242 258"/>
+</g>
+<g fill="#EE8329"><circle cx="210" cy="118" r="4"/><circle cx="210" cy="155" r="5"/><circle cx="172" cy="200" r="5"/><circle cx="252" cy="195" r="5"/><circle cx="210" cy="210" r="5"/><circle cx="182" cy="262" r="5"/><circle cx="242" cy="258" r="5"/></g>
+<path d="M280 190 l24 -14 l26 10 l3 26 l-22 15 l-27 -8 z" fill="none" stroke="#D97757" stroke-width="3"/>
+<g stroke="#6a9bcc" stroke-width="3" fill="none" stroke-linecap="round"><rect x="70" y="86" width="46" height="32" rx="6"/><circle cx="93" cy="102" r="7"/><path d="M116 96 l21 -10 v32 l-21 -10"/></g>
+<g stroke="#8ab5e0" stroke-opacity="0.4" stroke-width="1.6"><path d="M138 100 L182 118" /><path d="M138 108 L172 155"/></g>
+<rect x="330" y="70" width="120" height="80" rx="8" fill="#0e0e0d" stroke="#6a9bcc" stroke-width="2.4"/>
+<text x="345" y="98" font-family="monospace" font-size="13" fill="#8ab5e0">CYCLE 11.3s</text>
+<text x="345" y="118" font-family="monospace" font-size="13" fill="#7ed492">ON PACE</text>
+<text x="345" y="138" font-family="monospace" font-size="13" fill="#f5a85e">DEV: 0</text>
+</svg>

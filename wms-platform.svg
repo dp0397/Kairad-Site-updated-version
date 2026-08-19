@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="WMS web, mobile, and cloud architecture">
+<defs>
+<linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101720"/><stop offset="1" stop-color="#0e0e0d"/></linearGradient>
+<pattern id="grid5" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#8ab5e0" stroke-opacity="0.07"/></pattern>
+</defs>
+<rect width="900" height="560" rx="14" fill="url(#bg5)"/><rect width="900" height="560" rx="14" fill="url(#grid5)"/>
+<path d="M340 170 c0 -45 40 -75 80 -70 c15 -45 80 -55 110 -20 c45 -15 90 20 82 62 c30 12 30 55 -8 62 l-240 0 c-30 0 -44 -18 -24 -34z" fill="none" stroke="#6a9bcc" stroke-width="4" transform="translate(30,-20)"/>
+<text x="490" y="150" font-family="monospace" font-size="16" fill="#8ab5e0" text-anchor="middle">CLOUD</text>
+<rect x="120" y="270" width="330" height="200" rx="12" fill="#0e0e0d" stroke="#6a9bcc" stroke-width="4"/>
+<path d="M120 310 H450" stroke="#6a9bcc" stroke-width="3"/>
+<g fill="#EE8329"><circle cx="145" cy="290" r="6"/><circle cx="167" cy="290" r="6" fill="#D97757"/><circle cx="189" cy="290" r="6" fill="#6a9bcc"/></g>
+<g stroke="#8ab5e0" stroke-width="3" fill="none" stroke-linecap="round">
+<path d="M150 430 l40 -45 l45 25 l55 -60 l50 20 l60 -50" stroke="#EE8329"/>
+<path d="M150 350 H290" stroke-opacity="0.5"/><path d="M150 375 H250" stroke-opacity="0.35"/>
+</g>
+<rect x="600" y="250" width="130" height="230" rx="18" fill="#0e0e0d" stroke="#6a9bcc" stroke-width="4"/>
+<path d="M640 268 H690" stroke="#6a9bcc" stroke-width="3" stroke-linecap="round"/>
+<g fill="none" stroke="#8ab5e0" stroke-width="2.5"><rect x="620" y="295" width="90" height="34" rx="5"/><rect x="620" y="342" width="90" height="34" rx="5"/><rect x="620" y="389" width="90" height="34" rx="5"/></g>
+<path d="M638 312 h20 m10 0 h34 M638 359 h20 m10 0 h34 M638 406 h20 m10 0 h34" stroke="#EE8329" stroke-width="3" stroke-linecap="round"/>
+<g stroke="#D97757" stroke-width="3" fill="none" stroke-dasharray="7 8">
+<path d="M420 250 C 450 210, 470 200, 500 190"/><path d="M600 240 C 580 210, 560 200, 540 190"/><path d="M450 370 C 510 370, 540 370, 600 370"/>
+</g>
+<text x="285" y="510" font-family="monospace" font-size="18" fill="#8595a5" text-anchor="middle">WEB CONSOLE</text>
+<text x="665" y="510" font-family="monospace" font-size="18" fill="#8595a5" text-anchor="middle">ANDROID</text>
+</svg>
