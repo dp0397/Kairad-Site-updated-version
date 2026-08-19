@@ -71,8 +71,8 @@
             <p class="eyebrow"><span class="chevrons">›››</span> Get In Touch</p>
             <h2>Request a quote</h2>
           </div>
-
-          <form id="quote-form" novalidate>
+          
+          <form id="quote-form" action="YOUR_FORMSPREE_LINK_HERE" method="POST">
             <div class="form-grid">
               <div class="form-field">
                 <label for="f-name">Full name <span class="required">*</span></label>
@@ -84,7 +84,8 @@
               </div>
               <div class="form-field">
                 <label for="f-email">Email <span class="required">*</span></label>
-                <input type="email" id="f-email" name="email" required autocomplete="email">
+                <!-- We add name="_replyto" so Formspree knows who to reply to -->
+                <input type="email" id="f-email" name="_replyto" required autocomplete="email">
               </div>
               <div class="form-field">
                 <label for="f-phone">Phone</label>
@@ -99,7 +100,7 @@
                   <option value="audit">Warehouse 03 · Structural &amp; Rack Audits</option>
                   <option value="tracking">Warehouse 04 · PV-Plate BLE Tracking</option>
                   <option value="wms">Warehouse 05 · Warehouse Management System</option>
-                                    <option value="other">Not sure / other</option>
+                  <option value="other">Not sure / other</option>
                 </select>
               </div>
               <div class="form-field full">
@@ -108,11 +109,9 @@
               </div>
             </div>
             <button type="submit" class="btn btn-primary" style="margin-top:1.5rem;">Send Request</button>
-            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-            <p class="form-note">This form opens your email client with a pre-filled message addressed to dharmesh.patel@kairad.org — nothing is sent from this page directly.</p>
+            <p class="form-note">Your request will be sent securely to dharmesh.patel@kairad.org.</p>
           </form>
-        </div>
-
+          
         <div>
           <div class="contact-card">
             <div class="card-icon">@</div>
