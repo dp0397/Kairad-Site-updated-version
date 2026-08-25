@@ -6,8 +6,7 @@
 <title>Contact Us | Request a Quote | Kairad Consulting</title>
 <meta name="description" content="Request a quote from Kairad Consulting for warehouse consulting or industrial engineering services. Reach us at dharmesh.patel@kairad.org.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<!-- Updated CSS path -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -73,8 +72,7 @@
             <h2>Request a quote</h2>
           </div>
 
-          <!-- Updated Form for Netlify integration -->
-          <form name="quote-request" method="POST" data-netlify="true" id="netlify-quote-form">
+          <form id="quote-form" novalidate>
             <div class="form-grid">
               <div class="form-field">
                 <label for="f-name">Full name <span class="required">*</span></label>
@@ -101,7 +99,7 @@
                   <option value="audit">Warehouse 03 · Structural &amp; Rack Audits</option>
                   <option value="tracking">Warehouse 04 · PV-Plate BLE Tracking</option>
                   <option value="wms">Warehouse 05 · Warehouse Management System</option>
-                  <option value="other">Not sure / other</option>
+                                    <option value="other">Not sure / other</option>
                 </select>
               </div>
               <div class="form-field full">
@@ -109,15 +107,9 @@
                 <textarea id="f-message" name="message" rows="5" required></textarea>
               </div>
             </div>
-            
-            <!-- Hidden field to prevent spam bots -->
-            <div hidden>
-              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </div>
-            
             <button type="submit" class="btn btn-primary" style="margin-top:1.5rem;">Send Request</button>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-            <p class="form-note">Your request will be sent directly to our engineering team.</p>
+            <p class="form-note">This form opens your email client with a pre-filled message addressed to dharmesh.patel@kairad.org — nothing is sent from this page directly.</p>
           </form>
         </div>
 
@@ -209,7 +201,6 @@
   </div>
 </footer>
 
-<!-- Updated JS path -->
-<script src="main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
