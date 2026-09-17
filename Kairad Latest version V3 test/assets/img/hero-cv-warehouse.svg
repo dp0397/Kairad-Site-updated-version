@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720" role="img" aria-labelledby="heroCvTitle">
+<title id="heroCvTitle">Computer-vision work measurement overlay on a production-line workstation, with a live cycle-time monitor panel</title>
+<defs>
+  <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#eef2f8"/>
+    <stop offset="1" stop-color="#dfe7f2"/>
+  </linearGradient>
+  <linearGradient id="benchGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#c7ced9"/>
+    <stop offset="1" stop-color="#aab2c1"/>
+  </linearGradient>
+  <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#1c3c58"/>
+    <stop offset="1" stop-color="#274d70"/>
+  </linearGradient>
+  <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#141413" flood-opacity="0.18"/>
+  </filter>
+  <marker id="arrowHead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#EE8329"/>
+  </marker>
+</defs>
+
+<!-- ===== Scene backdrop ===== -->
+<rect x="0" y="0" width="900" height="720" rx="24" fill="url(#floorGrad)"/>
+<g opacity="0.35" stroke="#9fb3ca" stroke-width="1">
+  <line x1="0" y1="560" x2="900" y2="560"/>
+  <line x1="90" y1="560" x2="40" y2="700"/>
+  <line x1="300" y1="560" x2="270" y2="700"/>
+  <line x1="520" y1="560" x2="510" y2="700"/>
+  <line x1="740" y1="560" x2="760" y2="700"/>
+</g>
+<rect x="0" y="558" width="900" height="162" fill="#eef2f8"/>
+
+<!-- ===== Workbench ===== -->
+<g filter="url(#softShadow)">
+  <rect x="120" y="470" width="360" height="24" rx="6" fill="url(#benchGrad)"/>
+  <rect x="140" y="494" width="16" height="90" fill="#8b93a2"/>
+  <rect x="440" y="494" width="16" height="90" fill="#8b93a2"/>
+</g>
+
+<!-- Assembly parts on bench -->
+<circle cx="220" cy="462" r="16" fill="#EE8329"/>
+<circle cx="220" cy="462" r="16" fill="none" stroke="#a8540f" stroke-width="2"/>
+<rect x="278" y="446" width="34" height="24" rx="4" fill="#d97757"/>
+<rect x="350" y="450" width="46" height="20" rx="10" fill="#396c96"/>
+<rect x="410" y="452" width="30" height="18" rx="4" fill="#1f5079"/>
+
+<!-- ===== Operator (simplified, non-literal figure) ===== -->
+<g>
+  <ellipse cx="235" cy="640" rx="46" ry="12" fill="#141413" opacity="0.08"/>
+  <path d="M205 635 L212 520 L258 520 L266 635 Z" fill="#1f5079"/>
+  <circle cx="235" cy="478" r="26" fill="#e9c9a6"/>
+  <path d="M209 478 a26 26 0 0 1 52 0 v-6 a26 22 0 0 0 -52 0 Z" fill="#3d2a1f"/>
+  <!-- arm reaching to bench -->
+  <path d="M256 526 C300 520 320 500 336 468" stroke="#1f5079" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <circle cx="336" cy="468" r="10" fill="#e9c9a6"/>
+</g>
+
+<!-- ===== ROI zone overlays (computer-vision tracking) ===== -->
+<g fill="none" stroke-width="2" stroke-dasharray="6 5">
+  <rect x="195" y="432" width="60" height="56" rx="8" stroke="#EE8329"/>
+  <rect x="262" y="426" width="66" height="60" rx="8" stroke="#396c96"/>
+  <rect x="335" y="428" width="70" height="58" rx="8" stroke="#d97757"/>
+  <rect x="400" y="430" width="56" height="56" rx="8" stroke="#396c96"/>
+</g>
+<g font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="0.04em">
+  <text x="200" y="426" fill="#a8540f">RUBBER</text>
+  <text x="266" y="420" fill="#396c96">PRESS</text>
+  <text x="340" y="422" fill="#a8502f">CAP</text>
+  <text x="400" y="424" fill="#396c96">FINISHED</text>
+</g>
+
+<!-- motion path between zones -->
+<path d="M225 460 Q290 410 360 458 Q400 480 428 458" fill="none" stroke="#EE8329" stroke-width="2" stroke-dasharray="3 6" opacity="0.85"/>
+<circle cx="336" cy="468" r="4" fill="#EE8329"/>
+
+<!-- ===== Overhead CV camera ===== -->
+<g filter="url(#softShadow)">
+  <line x1="700" y1="40" x2="700" y2="110" stroke="#5b6472" stroke-width="6"/>
+  <rect x="655" y="104" width="90" height="46" rx="10" fill="#171b21"/>
+  <circle cx="675" cy="127" r="12" fill="#274d70" stroke="#6a9bcc" stroke-width="2"/>
+  <circle cx="675" cy="127" r="5" fill="#8ab5e0"/>
+  <circle cx="725" cy="115" r="4" fill="#EE8329"/>
+</g>
+<g font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#171b21">
+  <rect x="640" y="58" width="184" height="30" rx="15" fill="#ffffff" stroke="#396c96" stroke-width="1.5"/>
+  <text x="660" y="78" letter-spacing="0.03em">CV CAMERA FEED · LIVE</text>
+</g>
+<!-- camera field-of-view cone -->
+<path d="M675 150 L330 430 L455 440 Z" fill="#6a9bcc" opacity="0.09"/>
+<path d="M675 150 L330 430" stroke="#6a9bcc" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.55"/>
+<path d="M675 150 L455 440" stroke="#6a9bcc" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.55"/>
+
+<!-- dimension / measurement annotation, echoes audit-style callouts -->
+<line x1="335" y1="500" x2="410" y2="500" stroke="#EE8329" stroke-width="1.5" marker-end="url(#arrowHead)"/>
+<line x1="410" y1="500" x2="335" y2="500" stroke="#EE8329" stroke-width="1.5" marker-end="url(#arrowHead)"/>
+<text x="345" y="514" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#a8540f">0.42 m reach</text>
+
+<!-- ===== Cycle-monitor UI panel (floating tablet/dashboard card) ===== -->
+<g filter="url(#softShadow)">
+  <rect x="60" y="560" width="330" height="150" rx="16" fill="url(#panelGrad)"/>
+</g>
+<g font-family="Space Grotesk, sans-serif">
+  <text x="86" y="596" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="0.03em">CYCLE MONITOR</text>
+  <text x="86" y="614" font-size="10.5" fill="#b7cfe6">Gel-pen cap assembly · Line 3</text>
+
+  <text x="86" y="646" font-size="11" fill="#b7cfe6">Benchmark cycle</text>
+  <text x="240" y="646" font-size="13" font-weight="700" fill="#8ab5e0" text-anchor="end">11.0s</text>
+
+  <text x="86" y="668" font-size="11" fill="#b7cfe6">Live cycle</text>
+  <text x="240" y="668" font-size="13" font-weight="700" fill="#EE8329" text-anchor="end">9.6s</text>
+
+  <text x="86" y="690" font-size="11" fill="#b7cfe6">Sequence deviations</text>
+  <text x="360" y="690" font-size="13" font-weight="700" fill="#ffffff" text-anchor="end">0 today</text>
+</g>
+<!-- little live pulse dot -->
+<circle cx="356" cy="583" r="5" fill="#4fd17a"/>
+<circle cx="356" cy="583" r="5" fill="none" stroke="#4fd17a" stroke-width="2">
+  <animate attributeName="r" values="5;11;5" dur="2.2s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.9;0;0.9" dur="2.2s" repeatCount="indefinite"/>
+</circle>
+
+<!-- mini sparkline inside panel -->
+<polyline points="270,660 285,652 300,658 315,644 330,650 345,636" fill="none" stroke="#EE8329" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+<!-- ===== Warehouse racking silhouette on the right, ties CV work to warehouse practice ===== -->
+<g opacity="0.9">
+  <rect x="620" y="470" width="230" height="150" fill="none" stroke="#396c96" stroke-width="3" rx="4"/>
+  <line x1="620" y1="520" x2="850" y2="520" stroke="#396c96" stroke-width="2"/>
+  <line x1="620" y1="570" x2="850" y2="570" stroke="#396c96" stroke-width="2"/>
+  <line x1="683" y1="470" x2="683" y2="620" stroke="#396c96" stroke-width="2"/>
+  <line x1="746" y1="470" x2="746" y2="620" stroke="#396c96" stroke-width="2"/>
+  <line x1="809" y1="470" x2="809" y2="620" stroke="#396c96" stroke-width="2"/>
+  <rect x="632" y="482" width="38" height="26" rx="3" fill="#d97757" opacity="0.85"/>
+  <rect x="696" y="530" width="38" height="26" rx="3" fill="#6a9bcc" opacity="0.85"/>
+  <rect x="760" y="580" width="38" height="26" rx="3" fill="#EE8329" opacity="0.85"/>
+</g>
+</svg>
